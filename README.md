@@ -2,34 +2,154 @@ This is simply a simple demo Tracking website for a delivery company backend ful
 where admin manage customers information and also update customers of thier progress of the delivery, whick customers can access thier information and delivery process from 
 the website Home page with thier unique Track ID.
 
-**### Tracking Page.**
-In the home page below image simply for customers to and enter thier unique Tracking ID to access thier information and currect location or progress of the delivery
+### MVC Controllers 
 
-<img width="959" alt="Screenshot 2024-06-23 024314-frontPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/52e86ce8-a6e0-4604-b3ba-d36467f71585">
+> HomeController
+> ProfileController
+> AdminController
+> AdminTrackController
 
-**Tracking result.**
-<img width="960" alt="Screenshot 2024-06-23 033253-trckPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/07f1a26b-f4a4-4a42-844e-166be7a1fa17">
+- [ ]  HomeController
 
-**### admin Login Page.**
-simply a login page to access the admin dashboard
+ **Inde page:** 
+`In the home page below image simply for customers to enter thier unique Tracking ID to access thier information and currect location or progress of the delivery 
+`
+> <img width="960" alt="Screenshot 2024-06-23 115346-indePge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/a2dd4f73-1592-40fd-992a-91e852f67153">
 
-<img width="956" alt="Screenshot 2024-06-23 024447-dminLoginPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/c25afd13-dd6d-4166-ad54-a4fc56dc4a31">
+ **Show page:** 
+`here all information of related to the the authenticated track ID are displayed
+`
+> <img width="960" alt="Screenshot 2024-06-23 115738-show" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/9dfd84ae-bab9-4005-aa4f-68df0f21c176">
 
+ **admin Login Page:** 
+`simply a login page to access the admin dashboard
+`
 
-**### Dashboard Page.**
-This page is only accessible by admin. Here new customers can be added, Customers details can be updated, Customer details can be Deleted also, you can also click on view customer
-at each roll to access track history of the specific customers view clicked
-
-<img width="960" alt="Screenshot 2024-06-23 024623-dminIndePge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7bf87b2d-a3cc-465b-b3ee-9037e0ed7aff">
-
-
-**### Customer History**
-Here current Location and progress of the customer goods is updated, admin can add new more history, update record or delete record also edit record if nessary
-
-<img width="956" alt="Screenshot 2024-06-23 024951-ddHistory" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7f359355-75f5-4ac2-bd62-6c2c5ae6de2c">
+> <img width="957" alt="Screenshot 2024-06-23 120843-Login" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/2338f426-4f93-4987-89d1-9b701ccbe928">
 
 
-**### admin Profile Login Settings**
+ **LogOut  Page:** 
+`logout session is also included in the home controller
+`
 
-<img width="958" alt="Screenshot 2024-06-23 024848-profileSettings" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/3b2a48a1-057f-4fc7-876f-6e59ecc02b5c">
+_Home Controller Source Code_
 
+`namespace CourierMvcApiConsume.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+        Uri baseAddress = new Uri("https://localhost:7264/api/");
+        private readonly HttpClient _client;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _client = new HttpClient();
+            _client.BaseAddress = baseAddress;
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+
+        }
+
+        [HttpPost]
+        public IActionResult Index(User user)
+        {
+            return RedirectToAction("Show", "Home", new { track = user.TrackId });
+            //return View();
+
+        }
+
+        public IActionResult Show(string track) 
+        {
+            User user = new User();
+            HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "ViewTrack/GetUser/" + track).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                user = JsonConvert.DeserializeObject<User>(data);
+            }
+
+            TempData["sName"] = user.SenderName;
+            TempData["sContact"] = user.SenderContact;
+
+            TempData["rName"] = user.ReceiverName;
+            TempData["rContact"] = user.ReceiverContact;
+            TempData["rAddress"] = user.ReceiverAddress;
+
+            TempData["cret"] = user.Created;
+
+
+
+            List<TrackHistory> viewTrck = new List<TrackHistory>();
+            HttpResponseMessage response2 = _client.GetAsync(_client.BaseAddress + "ViewTrack/ViewTracks/" + user.Id).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data2 = response2.Content.ReadAsStringAsync().Result;
+                viewTrck = JsonConvert.DeserializeObject<List<TrackHistory>>(data2);
+            }
+
+            return View(viewTrck);
+        }
+
+        public IActionResult Login()
+        {
+            int id = 1;
+
+            AdminLogin user = new AdminLogin();
+            HttpResponseMessage response = _client.GetAsync(_client.BaseAddress + "Login/Profile/" + id).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                user = JsonConvert.DeserializeObject<AdminLogin>(data);
+            }
+            return View(user);
+        }
+
+        [HttpPost]
+        public IActionResult Login(AdminLogin track)
+        {
+            string data = JsonConvert.SerializeObject(track);
+            StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = _client.PostAsync(_client.BaseAddress + "Login/Login", content).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                var check = track.UserName;
+
+                List<Claim> lst = new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier, track.UserName),
+                new Claim(ClaimTypes.Name, track.UserName)
+
+            };
+                ClaimsIdentity ci = new ClaimsIdentity(lst,
+                    Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults.AuthenticationScheme);
+                ClaimsPrincipal cp = new ClaimsPrincipal(ci);
+
+                HttpContext.SignInAsync(cp);
+
+                return RedirectToAction("Index", "Admin");
+            }
+            //HttpContext.Session.SetString("Logged", data);
+
+
+            return View();
+        }
+
+        public IActionResult LogOut()
+        {
+            HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "home");
+        }
+
+    }
+}
+    `
