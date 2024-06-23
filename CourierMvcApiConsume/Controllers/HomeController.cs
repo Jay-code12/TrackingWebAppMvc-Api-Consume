@@ -40,7 +40,6 @@ namespace CourierMvcApiConsume.Controllers
 
         }
 
-        //[HttpGet("{track}")]
         public IActionResult Show(string track) 
         {
             User user = new User();

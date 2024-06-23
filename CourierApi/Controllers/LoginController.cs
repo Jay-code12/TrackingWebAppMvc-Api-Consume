@@ -32,9 +32,9 @@ namespace CourierApi.Controllers
 ;
         }
 
-        private AdminLogin AuthenticateUser(AdminLogin user)
+        private async Task<AdminLogin> AuthenticateUserAsync(AdminLogin user)
         {
-            var _user = _dbContext.AdminLogin.FirstOrDefault(d => d.UserName == user.UserName && d.Password == user.Password);
+            var _user = await _dbContext.AdminLogin.FirstOrDefaultAsync(d => d.UserName == user.UserName && d.Password == user.Password);
 
             if (_user == null)
             {
@@ -59,9 +59,9 @@ namespace CourierApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(AdminLogin user)
+        public async Task<IActionResult> LoginAsync(AdminLogin user)
         {
-            var user_ = AuthenticateUser(user);
+            var user_ =  AuthenticateUserAsync(user);
             if(user_ != null) 
             { 
                 var token = GenerateToken(user_);
@@ -71,9 +71,9 @@ namespace CourierApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Profile(int id)
+        public async Task<IActionResult> ProfileAsync(int id)
         {
-            var users = _dbContext.AdminLogin.Find(id);
+            var users = await _dbContext.AdminLogin.FindAsync(id);
             if (users == null)
             {
                 return NotFound();

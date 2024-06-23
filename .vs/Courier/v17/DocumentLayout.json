@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\OWNER\\source\\repos\\Courier\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|c:\\users\\owner\\source\\repos\\courier\\couriermvcapiconsume\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|solutionrelative:couriermvcapiconsume\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|c:\\users\\owner\\source\\repos\\courier\\courierapi\\controllers\\trackapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|solutionrelative:courierapi\\controllers\\trackapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|c:\\users\\owner\\source\\repos\\courier\\couriermvcapiconsume\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|solutionrelative:couriermvcapiconsume\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|c:\\users\\owner\\source\\repos\\courier\\courierapi\\controllers\\userapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|solutionrelative:courierapi\\controllers\\userapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|c:\\users\\owner\\source\\repos\\courier\\courierapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|solutionrelative:courierapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|c:\\users\\owner\\source\\repos\\courier\\couriermvcapiconsume\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|solutionrelative:couriermvcapiconsume\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|c:\\users\\owner\\source\\repos\\courier\\courierapi\\controllers\\viewtrackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BD80D19-435A-450F-A898-F8CBFFE69A21}|CourierApi\\CourierApi.csproj|solutionrelative:courierapi\\controllers\\viewtrackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-23T16:44:08.691Z",
+              "Title": "UserApiController.cs",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\UserApiController.cs",
+              "RelativeDocumentMoniker": "CourierApi\\Controllers\\UserApiController.cs",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\UserApiController.cs",
+              "RelativeToolTip": "CourierApi\\Controllers\\UserApiController.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAAAGIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:53:38.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAACoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-23T16:42:19.679Z",
+              "Title": "TrackApiController.cs",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\TrackApiController.cs",
+              "RelativeDocumentMoniker": "CourierApi\\Controllers\\TrackApiController.cs",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\TrackApiController.cs",
+              "RelativeToolTip": "CourierApi\\Controllers\\TrackApiController.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAAGYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:30:26.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CourierMvcApiConsume\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CourierMvcApiConsume\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:36:16.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewTrackController.cs",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\ViewTrackController.cs",
+              "RelativeDocumentMoniker": "CourierApi\\Controllers\\ViewTrackController.cs",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\ViewTrackController.cs",
+              "RelativeToolTip": "CourierApi\\Controllers\\ViewTrackController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABcAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:30:37.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "CourierApi\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierApi\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "CourierApi\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:29:46.251Z",
               "EditorCaption": ""
             }
           ]

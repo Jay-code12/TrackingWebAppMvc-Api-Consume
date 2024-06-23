@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace CourierApi.Controllers
@@ -19,9 +20,9 @@ namespace CourierApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUsers()
+        public async Task<IActionResult> GetUsersAsync()
         {
-            var users = _dbContext.Userstr.ToList();
+            var users = await _dbContext.Userstr.ToListAsync();
             if(users.Count == 0)
             {
                 return NotFound();
@@ -30,9 +31,9 @@ namespace CourierApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetUser(int id) 
+        public async Task<IActionResult> GetUserAsync(int id) 
         { 
-            var user = _dbContext.Userstr.Find(id);
+            var user = await _dbContext.Userstr.FindAsync(id);
             if(user == null)
             {
                 return NotFound();
@@ -41,7 +42,7 @@ namespace CourierApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostUser(UserApi model)
+        public async Task<IActionResult> PostUserAsync(UserApi model)
         {
             if (model.Id > 0)
             {
@@ -49,15 +50,15 @@ namespace CourierApi.Controllers
             }
             if(_dbContext.Userstr.FirstOrDefault(d => d.TrackId == model.TrackId) == null)
             {
-                _dbContext.Userstr.Add(model);
-                _dbContext.SaveChanges();
+                await _dbContext.Userstr.AddAsync(model);
+                await _dbContext.SaveChangesAsync();
                 return Ok();
             }
             return BadRequest();
         }
 
         [HttpPut]
-        public IActionResult EditUser(UserApi model)
+        public async Task<IActionResult> EditUserAsync(UserApi model)
         {
             if(model == null || model.Id == 0)
             {
@@ -70,7 +71,7 @@ namespace CourierApi.Controllers
                 }
             }
 
-            var user = _dbContext.Userstr.Find(model.Id);
+            var user = await _dbContext.Userstr.FindAsync(model.Id);
             if(user == null)
             {
                 return NotFound();
@@ -91,22 +92,22 @@ namespace CourierApi.Controllers
 
 
             _dbContext.Userstr.Update(user);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
 
             return Ok(user);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteUser(int id)
+        public async Task<IActionResult> DeleteUserAsync(int id)
         {
-            var user = _dbContext.Userstr.Find(id);
+            var user = await _dbContext.Userstr.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
             _dbContext.Userstr.Remove(user);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
             return Ok();
 
         }

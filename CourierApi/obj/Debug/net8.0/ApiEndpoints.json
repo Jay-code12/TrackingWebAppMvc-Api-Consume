@@ -208,7 +208,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.ViewTrackController",
-    "Method": "GetUser",
+    "Method": "GetUserAsync",
     "RelativePath": "api/ViewTrack/GetUser/{track}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -224,7 +224,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.ViewTrackController",
-    "Method": "ViewTracks",
+    "Method": "ViewTracksAsync",
     "RelativePath": "api/ViewTrack/ViewTracks/{id}",
     "HttpMethod": "GET",
     "IsController": true,

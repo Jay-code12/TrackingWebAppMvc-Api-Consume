@@ -1,6 +1,7 @@
 ﻿using CourierApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CourierApi.Controllers
 {
@@ -17,9 +18,9 @@ namespace CourierApi.Controllers
 
 
         [HttpGet("{id}")]
-        public IActionResult GetTrack(int id)
+        public async Task<IActionResult> GetTrackAsync(int id)
         {
-            var users = _dbContext.TrackHistories.Find(id);
+            var users = await _dbContext.TrackHistories.FindAsync(id);
             if (users == null)
             {
                 return NotFound();
@@ -28,9 +29,9 @@ namespace CourierApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetTracks(int id)
+        public async Task<IActionResult> GetTracksAsync(int id)
         {
-            var track = _dbContext.TrackHistories.Where(d => d.UserId == id).ToList();
+            var track = await _dbContext.TrackHistories.Where(d => d.UserId == id).ToListAsync();
             if (track == null)
             {
                 return NotFound();
@@ -39,20 +40,20 @@ namespace CourierApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostTrack(TrackHistoryApi model)
+        public async Task<IActionResult> PostTrackAsync(TrackHistoryApi model)
         {
             if (model.Id > 0)
             {
                 model.Id = 0;
             }
 
-            _dbContext.TrackHistories.Add(model);
-            _dbContext.SaveChanges();
+            await  _dbContext.TrackHistories.AddAsync(model);
+            await _dbContext.SaveChangesAsync();
             return Ok();
         }
 
         [HttpPut]
-        public IActionResult EditTrack(TrackHistoryApi model)
+        public async Task<IActionResult> EditTrackAsync(TrackHistoryApi model)
         {
             if (model == null || model.Id == 0)
             {
@@ -66,7 +67,7 @@ namespace CourierApi.Controllers
                 }
             }
 
-            var user = _dbContext.TrackHistories.Find(model.Id);
+            var user = await _dbContext.TrackHistories.FindAsync(model.Id);
             if (user == null)
             {
                 return NotFound();
@@ -75,31 +76,31 @@ namespace CourierApi.Controllers
             user.Description = model.Description;
             user.Location = model.Location;
 
-            _dbContext.TrackHistories.Update(user);
-            _dbContext.SaveChanges();
+             _dbContext.TrackHistories.Update(user);
+            await _dbContext.SaveChangesAsync();
 
             return Ok(user);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteTrack(int id)
+        public async Task<IActionResult> DeleteTrackAsync(int id)
         {
-            var user = _dbContext.TrackHistories.Find(id);
+            var user = await _dbContext.TrackHistories.FindAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
             _dbContext.TrackHistories.Remove(user);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
             return Ok();
 
         }
 
         [HttpGet("{id}")]
-        public IActionResult FindTrack(string track)
+        public async Task<IActionResult> FindTrackAsync(string track)
         {
-            var _user = _dbContext.Userstr.FirstOrDefault(d => d.TrackId == track);
+            var _user = await _dbContext.Userstr.FirstOrDefaultAsync(d => d.TrackId == track);
 
             if (_user != null)
             {

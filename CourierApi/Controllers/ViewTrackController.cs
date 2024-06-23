@@ -1,6 +1,7 @@
 ﻿using CourierApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CourierApi.Controllers
 {
@@ -18,9 +19,9 @@ namespace CourierApi.Controllers
 
 
         [HttpGet("{track}")]
-        public IActionResult GetUser(string track)
+        public async Task<IActionResult> GetUserAsync(string track)
         {
-            var users = _dbContext.Userstr.FirstOrDefault(d => d.TrackId == track);
+            var users = await _dbContext.Userstr.FirstOrDefaultAsync(d => d.TrackId == track);
             if (users == null)
             {
                 return NotFound();
@@ -28,10 +29,12 @@ namespace CourierApi.Controllers
             return Ok(users);
         }
 
+        
+
         [HttpGet("{id}")]
-        public IActionResult ViewTracks(int id)
+        public async Task<IActionResult> ViewTracksAsync(int id)
         {
-            var track = _dbContext.TrackHistories.Where(d => d.UserId == id).ToList();
+            var track = await _dbContext.TrackHistories.Where(d => d.UserId == id).ToListAsync();
             if (track == null)
             {
                 return NotFound();
