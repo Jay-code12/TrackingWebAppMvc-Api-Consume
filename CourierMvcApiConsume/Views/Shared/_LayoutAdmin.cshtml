@@ -1,0 +1,143 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index" />
+    <meta name="googlebot" content="index" />
+    <meta name="robots" content="follow" />
+    <meta name="robots" content="nocache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+
+    <base href="" />
+
+    <title>Dashboard | Courier</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> -->
+
+    <link href="~/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+
+    }
+    else
+    {
+        <script>
+            window.location.href = 'https://localhost:7191/Home/Login';
+        </script>
+    }
+
+    <div id="header">
+        <div id="top" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        Express Delivery
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="container">
+        <div class="row">
+            <div class="col-md-3 bg-primary" id="date"></div>
+            <div class="col-md-9" id="intr">
+                <div class="col-md-10">
+                    <h4 id="greetings"></h4>
+                </div>
+                <div class="col-md-2" style="text-align: right; padding: 8px;">
+                    <a asp-controller="Home" asp-action="LogOut"><span class="glyphicon glyphicon-off"></span> Log Off</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2" id="sidebar">
+                            
+                <br />
+                
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="h_nav">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c_nav" aria-expanded="false" aria-controls="collapseOne">
+                           Navigation
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="c_nav" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h_nav">
+                      <div class="panel-body">
+                            <ul class="list-unstyled">
+                                    <li><a asp-controller="Admin" asp-action="Index">Home</a></li>
+                                    <li><a asp-controller="Admin" asp-action="AddTrack">Add New User</a></li>
+                                    <br/>
+                                    <li><a asp-controller="Admin" asp-action="Profile">Profile Setting</a></li>
+                            </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>            
+              </div>
+
+              <div class="col-md-10">
+                  @RenderBody()
+              </div>
+
+        </div>
+    </div>
+
+    <div id="footer">
+                <div id="bottom" class="container">
+            <div class="">
+                Copyright &copy; 2024 Express Delivery
+            </div>
+        </div>    
+    </div>
+
+    <!--
+    <script>
+    var myDate = new Date();
+
+    document.getElementById('date').innerHTML =
+        '<b>' + myDate + '</b>';
+
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+
+    document.getElementById('greetings').innerHTML =
+        '<b>' + greet + '</b> ADMIN!';
+    </script> -->
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/js/script.js"></script>  
+  </body>
+</html>

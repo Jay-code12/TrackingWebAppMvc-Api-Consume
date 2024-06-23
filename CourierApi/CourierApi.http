@@ -1,0 +1,6 @@
+@CourierApi_HostAddress = http://localhost:5232
+
+GET {{CourierApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,19 @@
+﻿@model CourierMvcApiConsume.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ 
+<div id="img"> </div>
+
+
+<div id="track-box-section" class="mx-auto  shadow bg-white rounded">
+    <form asp-action="Index" class="p-5">
+        <div class="custom-file form-group d-flex mx-auto " style="width: 80%">
+            <input asp-for="TrackId" type="text" class="custom-file-input form-control rounded-0" style="width: 70%" value="S509484-D4">
+            <input type="submit" class="custom-file-label form-control rounded-0 btn btn-primary " style="width: 25%" value="Track" />
+        </div>
+    </form>
+</div>

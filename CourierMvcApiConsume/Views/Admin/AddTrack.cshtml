@@ -1,0 +1,104 @@
+﻿@model CourierMvcApiConsume.Models.User
+
+@{
+    ViewData["Title"] = "Add Page";
+    Layout = "_LayoutAdmin";
+}
+
+
+    <h3 class="page_label">Add Shipment/Cargo</h3>
+    <hr />
+
+    <!-- 
+        onsubmit="return confirm('CONFIRMATION: \n\n Are you sure the information you entered is correct?');"
+     enctype="multipart/form-data"
+    -->
+
+    <form class="form-horizontal" asp-action="AddTrack" onsubmit="return confirm('CONFIRMATION: \n\n Are you sure the information you entered is correct?');">
+        
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="TrackId" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="TrackId" type="text" class="form-control" />
+                <span asp-validation-for="TrackId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="Description" type="text" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OriginLocation" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="OriginLocation" type="text" class="form-control" />
+                <span asp-validation-for="OriginLocation" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DestinationLocation" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="DestinationLocation" type="text" class="form-control" />
+                <span asp-validation-for="DestinationLocation" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SenderName" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="SenderName" type="text" class="form-control" />
+                <span asp-validation-for="SenderName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SenderContact" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="SenderContact" type="text" class="form-control" />
+                <span asp-validation-for="SenderContact" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SenderAddress" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <textarea asp-for ="SenderAddress" class="form-control">
+                </textarea>
+                <span asp-validation-for="SenderAddress" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ReceiverName" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="ReceiverName" type="text" class="form-control" />
+                <span asp-validation-for="ReceiverName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ReceiverContact" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <input asp-for="ReceiverContact" type="text" class="form-control" />
+                <span asp-validation-for="ReceiverContact" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+        <label asp-for="ReceiverAddress" class="col-sm-3 control-label"></label>
+            <div class="col-sm-4">
+                <textarea asp-for="ReceiverAddress" class="form-control"></textarea>
+                <span asp-validation-for="ReceiverAddress" class="text-danger"></span>
+            </div>
+        </div>
+
+        <hr class="" />
+
+        <div class="form-group">
+            <div class="col-sm-7" style="text-align: right;">
+            <button type="submit" class="btn btn-primary ">Add New Shipment</button>
+            </div>
+        </div>
+
+    </form>

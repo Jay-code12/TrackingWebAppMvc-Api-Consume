@@ -1,0 +1,124 @@
+﻿@model IEnumerable<CourierMvcApiConsume.Models.TrackHistory>
+
+@{
+    ViewData["Title"] = "Index1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="" style="height: 50px"> </div>
+
+
+<div id="track-box-section" class="mx-auto  shadow bg-white rounded">
+
+    <div class="card-body">
+
+        <div class=" text-center py-2 px-3 bg-primary">
+            <span style="font-weight: bolder; font-size: 16px;" class="text-white">Track Details</span>
+        </div>
+
+        <article class="card border-right-0 border-left-0 border-top-0 ">
+            <div class="card-body row" style="font-size: 15px;">
+
+                <div class="col-6">
+                    From
+                    </br>
+                    <span style="font-weight: ;">
+                        <strong> @TempData["sName"], </strong>
+                        <strong> @TempData["sContact"] </strong>
+                        </br>
+                        </br>
+                        @TempData["cret"]
+                    </span>
+                </div>
+                <div class="col-6">
+                    To
+                    </br>
+                    <span style="font-weight: ; ">
+                        <strong> @TempData["rName"], </strong>
+                        <strong> @TempData["rContact"] </strong>
+                        </br>
+                        </br>
+                        @TempData["rAddress"]
+                    </span>
+                </div>
+            </div>
+        </article>
+
+        <div class="mt-2">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Receiver</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Sender</button>
+                </li>
+                <!--<li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                </li>-->
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <br />
+
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="card border-0" style="width: 90%">
+                        <div class="card-header">
+                            Status: <span class="ml-2"> Intransit </span>
+                        </div>
+                        <ul class="list- list-group-flush">
+                            <li class="list-group-item">Receiver Name: <span class="ml-4"> @TempData["rName"] </span></li>
+                            <li class="list-group-item">Receiver address: <span class="ml-4"> @TempData["rAddress"] </span></li>
+                            <li class="list-group-item">Receiver Contact: <span class="ml-4"> @TempData["rContact"] </span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="card border-0" style="width: 90%">
+                        <div class="card-header">
+                            Status: <span class="ml-2"> Intransit </span>
+                        </div>
+                        <ul class="list- list-group-flush">
+                            <li class="list-group-item">Sender Name: <span class="ml-4"> @TempData["sName"] </span></li>
+                            <li class="list-group-item">Sender address: <span class="ml-4"> @TempData["sAddress"] </span></li>
+                            <li class="list-group-item">Sender Location: <span class="ml-4"> @TempData["sContact"] </span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class=" text-center py-3 px-3 bg-primary">
+                    <span style="font-weight: bolder; font-size: 16px;" class="text-white">IN TRANSIT</span>
+                </div>
+
+            @foreach( var viewTrck in Model){
+
+                <div class="d-flex align-items-center" style="font-size: 13px">
+                    <div class="text-start" style="width:23%;">
+                        <span class="d-block text-" style="font-weight: bold; font-size:14px; color: lightgray;">@viewTrck.Created</span>
+                        <span style="color: lightgray;"><?php ?></span>
+                    </div>
+                    <div class=" mx-2" style="display: flex; flex-direction: column; width:5%;justify-content: center; align-items: center;">
+                        <div style="width: 2px; height: 30px; background: gray;"></div>
+                        <div class="d-flex justify-content-center align-items-center" style="height: 30px; width: 30px;border: 2px solid #FF4500; border-radius: 50%;">
+                            <div class="mx-auto blink" style="height: 10px; width: 10px; background: <?=$color; ?>; border-radius: 50%;" class="bg-primary"></div>
+                        </div>
+                        <div style="width: 2px; height: 30px; background: gray;"></div>
+                    </div>
+                    <div class="" style="width:75%;">
+                            <span class="d-block text-" style="font-weight: bold; color: green;"> @viewTrck.Description <span class="bg-primary px-2 mx-3" style="background-color: ; color:#fff">Intransit</span></span>
+                        <div>
+                                <span style="color: lightgray;"> @viewTrck.Location </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                }
+
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

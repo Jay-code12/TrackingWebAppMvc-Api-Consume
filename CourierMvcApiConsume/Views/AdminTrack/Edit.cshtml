@@ -1,0 +1,42 @@
+﻿@model CourierMvcApiConsume.Models.TrackHistory
+
+@{
+    ViewData["Title"] = "Edit Page";
+    Layout = "_LayoutAdmin";
+}
+
+<br />
+
+<hr class="hr_style" />
+
+<h3 class="page_label">Edit Shipment History For: @ViewData["trackId"]</h3>
+<hr />
+
+<form class="form-horizontal" asp-action="Edit">
+
+    <input asp-for="Id" type="hidden" class="form-control" />
+    <input asp-for="UserId" type="hidden" class="form-control"/>
+
+    <div class="form-group">
+        <label asp-for="Description" class="col-sm-3 control-label">Shipment Remark/Comment: *</label>
+        <div class="col-sm-4">
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location" class="col-sm-3 control-label">Current Location: *</label>
+        <div class="col-sm-4">
+            <input asp-for="Location" type="text" class="form-control">
+        </div>
+    </div>
+
+    <hr class="" />
+
+    <div class="form-group">
+        <div class="col-sm-7" style="text-align: right;">
+            <button type="submit" class="btn btn-primary submit_btn">Add History</button>
+        </div>
+    </div>
+</form>
+
+

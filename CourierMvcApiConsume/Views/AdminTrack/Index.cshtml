@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CourierMvcApiConsume.Models.TrackHistory>
+
+@{
+    ViewData["Title"] = "History Page";
+    Layout = "_LayoutAdmin";
+}
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+        <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+    </div>
+}
+
+<hr class="hr_style" />
+
+<h3 class="page_label"> Shipment History For: @ViewData["trackId"] </h3>
+
+<button class="btn text-white">
+    @Html.ActionLink("Add History", "AddTrack", new { id = ViewData["userId"] })
+</button>
+<hr class="hr_style" />
+
+<table class="table table-responsive table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Remark</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Description</td>
+                <td>@item.Location</td>
+                <td>@item.Created</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
