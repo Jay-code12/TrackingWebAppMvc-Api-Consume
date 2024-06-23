@@ -21,6 +21,11 @@ at each roll to access track history of the specific customers view clicked
 
 <img width="960" alt="Screenshot 2024-06-23 024623-dminIndePge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7bf87b2d-a3cc-465b-b3ee-9037e0ed7aff">
 
+**### Customer History**
+Here current Location and progress of the customer goods is updated, admin can add new more history, update record or delete record also edit record if nessary
+
+<img width="956" alt="Screenshot 2024-06-23 024951-ddHistory" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7f359355-75f5-4ac2-bd62-6c2c5ae6de2c">
+
 **### admin Profile Login Settings**
 
 <img width="958" alt="Screenshot 2024-06-23 024848-profileSettings" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/3b2a48a1-057f-4fc7-876f-6e59ecc02b5c">
