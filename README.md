@@ -153,3 +153,27 @@ _Home Controller Source Code_
     }
 }
     `
+
+- [ ] AdminController
+
+
+ **indePage:** 
+`This page is only accessible by admin. Here new customers can be added, Customers records can be updated, Customer record can be Deleted also, you can also click on view customer at each roll to access track history of the specific customers view clicked
+`
+> <img width="958" alt="Screenshot 2024-06-23 123927-dmin2" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/00ef266a-b476-4102-9db0-71e442cd089d">
+
+ **AddTrack Page:** 
+`Here admin can add new customers record to the database throught api
+`
+
+> <img width="941" alt="Screenshot 2024-06-23 123927-dmindd" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/786ea90d-415c-4d51-8d77-f91d4d8d3870">
+
+> <img width="958" alt="Screenshot 2024-06-23 124715-ddtrck" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/8bb3cc20-b3af-4f8d-a02b-0b5fd75ce79c">
+
+ **EditTrack Page:** 
+`Here admin can Update customers record on the database throught api
+`
+
+> <img width="940" alt="Screenshot 2024-06-23 123927-dmin2edi" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/d09ffe04-27aa-45d8-83cd-79793a8b024d">
+
+> <img width="959" alt="Screenshot 2024-06-23 125731-edith" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/cf376550-333d-4589-b44c-63ea4e4728a4">
