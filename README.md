@@ -7,6 +7,8 @@ In the home page below image simply for customers to and enter thier unique Trac
 
 <img width="959" alt="Screenshot 2024-06-23 024314-frontPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/52e86ce8-a6e0-4604-b3ba-d36467f71585">
 
+**Tracking result.**
+<img width="960" alt="Screenshot 2024-06-23 033253-trckPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/07f1a26b-f4a4-4a42-844e-166be7a1fa17">
 
 **### admin Login Page.**
 simply a login page to access the admin dashboard
