@@ -4,8 +4,7 @@
     "Projects": [
       {
         "Name": "CourierApi\\CourierApi.csproj",
-        "Action": "Start",
-        "DebugTarget": ""
+        "Action": "Start"
       },
       {
         "Name": "CourierMvcApiConsume\\CourierMvcApiConsume.csproj",

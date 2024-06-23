@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\OWNER\\source\\repos\\Courier\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|c:\\users\\owner\\source\\repos\\courier\\couriermvcapiconsume\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|solutionrelative:couriermvcapiconsume\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|c:\\users\\owner\\source\\repos\\courier\\couriermvcapiconsume\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE976F9-4094-4392-9942-3C43D11CC622}|CourierMvcApiConsume\\CourierMvcApiConsume.csproj|solutionrelative:couriermvcapiconsume\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CourierMvcApiConsume\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-23T16:44:08.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\Courier\\CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "CourierMvcApiConsume\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAACoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-23T16:42:19.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
