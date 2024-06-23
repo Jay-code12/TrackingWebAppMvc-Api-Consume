@@ -15,6 +15,9 @@ simply a login page to access the admin dashboard
 
 <img width="956" alt="Screenshot 2024-06-23 024447-dminLoginPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/c25afd13-dd6d-4166-ad54-a4fc56dc4a31">
 
+**### admin Profile Login Settings**
+
+<img width="958" alt="Screenshot 2024-06-23 024848-profileSettings" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/3b2a48a1-057f-4fc7-876f-6e59ecc02b5c">
 
 **### Dashboard Page.**
 This page is only accessible by admin. Here new customers can be added, Customers details can be updated, Customer details can be Deleted also, you can also click on view customer
