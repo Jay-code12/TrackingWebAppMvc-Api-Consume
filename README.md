@@ -5,7 +5,6 @@ the website Home page with thier unique Track ID.
 ### MVC Controllers 
 
 > HomeController
-> ProfileController
 > AdminController
 > AdminTrackController
 
@@ -177,3 +176,26 @@ _Home Controller Source Code_
 > <img width="940" alt="Screenshot 2024-06-23 123927-dmin2edi" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/d09ffe04-27aa-45d8-83cd-79793a8b024d">
 
 > <img width="959" alt="Screenshot 2024-06-23 125731-edith" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/cf376550-333d-4589-b44c-63ea4e4728a4">
+
+ **Profile Page:** 
+`Here admin can Update Login details to dashboard on the database throught api
+`
+
+> <img width="940" alt="Screenshot 2024-06-23 123927-profilelink" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/e0c41c82-32a1-41f0-9ced-842b27a70102">
+
+> <img width="959" alt="Screenshot 2024-06-23 151549-profile" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/f5622430-fafc-4e9e-9424-d768a70a6a2d">
+
+
+- [ ]  AdminTrackController
+
+ **Inde page:** 
+`Here current Location and progress of the customer goods is updated, admin can add new more history, update record or delete record if nessary
+`
+
+> <img width="940" alt="Screenshot 2024-06-23 123927-view" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/c5ca3888-91e4-4360-bfbf-5e98c125f5e1">
+
+
+> <img width="956" alt="Screenshot 2024-06-23 024951-ddHistory" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7f359355-75f5-4ac2-bd62-6c2c5ae6de2c">
+
+
+
