@@ -15,16 +15,19 @@ simply a login page to access the admin dashboard
 
 <img width="956" alt="Screenshot 2024-06-23 024447-dminLoginPge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/c25afd13-dd6d-4166-ad54-a4fc56dc4a31">
 
+
 **### Dashboard Page.**
 This page is only accessible by admin. Here new customers can be added, Customers details can be updated, Customer details can be Deleted also, you can also click on view customer
 at each roll to access track history of the specific customers view clicked
 
 <img width="960" alt="Screenshot 2024-06-23 024623-dminIndePge" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7bf87b2d-a3cc-465b-b3ee-9037e0ed7aff">
 
+
 **### Customer History**
 Here current Location and progress of the customer goods is updated, admin can add new more history, update record or delete record also edit record if nessary
 
 <img width="956" alt="Screenshot 2024-06-23 024951-ddHistory" src="https://github.com/Jay-code12/TrackingWebsite/assets/146625558/7f359355-75f5-4ac2-bd62-6c2c5ae6de2c">
+
 
 **### admin Profile Login Settings**
 
