@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CourierMvcApiConsume")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be5a5f2a80797a2939beda8355cd5e6da83dc6ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f88ec1c7769ae9f7a1612f65e22ab4b8a7834ddb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CourierMvcApiConsume")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CourierMvcApiConsume")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

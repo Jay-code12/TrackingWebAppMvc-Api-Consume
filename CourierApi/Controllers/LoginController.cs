@@ -32,9 +32,9 @@ namespace CourierApi.Controllers
 ;
         }
 
-        private async Task<AdminLogin> AuthenticateUserAsync(AdminLogin user)
+        private AdminLogin AuthenticateUser(AdminLogin user)
         {
-            var _user = await _dbContext.AdminLogin.FirstOrDefaultAsync(d => d.UserName == user.UserName && d.Password == user.Password);
+            var _user =  _dbContext.AdminLogin.FirstOrDefault(d => d.UserName == user.UserName && d.Password == user.Password);
 
             if (_user == null)
             {
@@ -61,7 +61,7 @@ namespace CourierApi.Controllers
         [HttpPost]
         public async Task<IActionResult> LoginAsync(AdminLogin user)
         {
-            var user_ =  AuthenticateUserAsync(user);
+            var user_ =  AuthenticateUser(user);
             if(user_ != null) 
             { 
                 var token = GenerateToken(user_);

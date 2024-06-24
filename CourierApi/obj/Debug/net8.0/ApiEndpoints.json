@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "CourierApi.Controllers.LoginController",
-    "Method": "Login",
+    "Method": "LoginAsync",
     "RelativePath": "api/Login/Login",
     "HttpMethod": "POST",
     "IsController": true,
@@ -17,7 +17,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.LoginController",
-    "Method": "Profile",
+    "Method": "ProfileAsync",
     "RelativePath": "api/Login/Profile/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -33,7 +33,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.TrackApiController",
-    "Method": "DeleteTrack",
+    "Method": "DeleteTrackAsync",
     "RelativePath": "api/TrackApi/DeleteTrack/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -49,7 +49,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.TrackApiController",
-    "Method": "EditTrack",
+    "Method": "EditTrackAsync",
     "RelativePath": "api/TrackApi/EditTrack",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -65,7 +65,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.TrackApiController",
-    "Method": "FindTrack",
+    "Method": "FindTrackAsync",
     "RelativePath": "api/TrackApi/FindTrack/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -86,7 +86,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.TrackApiController",
-    "Method": "GetTrack",
+    "Method": "GetTrackAsync",
     "RelativePath": "api/TrackApi/GetTrack/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -102,7 +102,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.TrackApiController",
-    "Method": "GetTracks",
+    "Method": "GetTracksAsync",
     "RelativePath": "api/TrackApi/GetTracks/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -118,7 +118,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.TrackApiController",
-    "Method": "PostTrack",
+    "Method": "PostTrackAsync",
     "RelativePath": "api/TrackApi/PostTrack",
     "HttpMethod": "POST",
     "IsController": true,
@@ -134,7 +134,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.UserApiController",
-    "Method": "DeleteUser",
+    "Method": "DeleteUserAsync",
     "RelativePath": "api/UserApi/DeleteUser/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -150,7 +150,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.UserApiController",
-    "Method": "EditUser",
+    "Method": "EditUserAsync",
     "RelativePath": "api/UserApi/EditUser",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -166,7 +166,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.UserApiController",
-    "Method": "GetUser",
+    "Method": "GetUserAsync",
     "RelativePath": "api/UserApi/GetUser/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -182,7 +182,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.UserApiController",
-    "Method": "GetUsers",
+    "Method": "GetUsersAsync",
     "RelativePath": "api/UserApi/GetUsers",
     "HttpMethod": "GET",
     "IsController": true,
@@ -192,7 +192,7 @@
   },
   {
     "ContainingType": "CourierApi.Controllers.UserApiController",
-    "Method": "PostUser",
+    "Method": "PostUserAsync",
     "RelativePath": "api/UserApi/PostUser",
     "HttpMethod": "POST",
     "IsController": true,
